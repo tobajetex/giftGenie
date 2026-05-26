@@ -16,7 +16,7 @@ export async function chatCompletion({
         headers: {
           Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
           "Content-Type": "application/json",
-          "HTTP-Referer": "http://localhost:3001", // REQUIRED by OpenRouter sometimes
+          // "HTTP-Referer": "http://localhost:3001", // REQUIRED by OpenRouter sometimes
           "X-Title": "GiftGenie",
         },
         body: JSON.stringify({

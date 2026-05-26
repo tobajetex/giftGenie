@@ -10,11 +10,11 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "Public")));
+app.use(express.static(path.join(__dirname, "public")));
 //checkEnvironment();
+const PORT = process.env.PORT;
 
 app.post("/api/gift", giftController);
-const PORT = 3001;
 
 app.listen(PORT, () => {
   console.log(`Server is running at http://localhost:${PORT}`);
