@@ -21,13 +21,16 @@ async function handleGiftRequest(e) {
   setLoading(true);
 
   try {
-    const response = await fetch("/api/gift", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+    const response = await fetch(
+      "https://giftgenie-oceg.onrender.com//api/gift",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userPrompt }),
       },
-      body: JSON.stringify({ userPrompt }),
-    });
+    );
     const data = await response.json();
 
     // showStream();
